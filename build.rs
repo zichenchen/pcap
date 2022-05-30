@@ -53,7 +53,7 @@ fn get_pcap_lib_version(
     }
 
     #[cfg(all(unix, not(target_os = "macos")))]
-    let mut libfile = PathBuf::from("libpcap.so");
+    let mut libfile = PathBuf::from("libpcap.so.1");
     #[cfg(target_os = "macos")]
     let mut libfile = PathBuf::from("libpcap.dylib");
     #[cfg(windows)]
